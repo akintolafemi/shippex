@@ -8,6 +8,10 @@ shippex
 
 This project is built using [React Native](http://reactnative.dev) & [Expo](http://docs.expo.dev). It is a simple shipment tracking app using React Native, which allows drivers to manage their shipment status.
 
+## Compiled APK
+
+Click [here](https://expo.dev/artifacts/eas/ks1kMi7K1921DZ7nZ4Y25q.apk) to download bundled APK for android devices
+
 ## Getting Started
 
 To get a local copy of the project up and running, follow these simple steps.

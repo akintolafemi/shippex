@@ -48,12 +48,12 @@ export const ScreenHeader = ({
     >
       {!hideBackButton && (
         <TouchableOpacity
+          onPress={backPressed}
           style={{ flexDirection: "row", alignItems: "center" }}
         >
           <Icon
             name={backButtonName}
             size={fontUtils.h(30)}
-            onPress={backPressed}
             color={backButtonColor ? backButtonColor : colorPrimary}
             containerStyle={{
               marginLeft: fontUtils.w(-5),
