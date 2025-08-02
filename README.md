@@ -1,7 +1,5 @@
 # shippex
 
-# shippex
-
 ## Project Name
 
 shippex
