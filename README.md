@@ -24,7 +24,7 @@ To get a local copy of the project up and running, follow these simple steps.
 ## Clone Repo
 
 ```bash
-$ git clone https://github.com/akintolafemi/shippex.git
+git clone https://github.com/akintolafemi/shippex.git
 ```
 
 ## Set up Environment
@@ -36,14 +36,14 @@ No enviroment set up is needed
 cd into the project folder on your PC and run the command below
 
 ```bash
-$ npm install
+npm install
 ```
 
 ## Running the app
 
 ```bash
 # development
-$ npx expo start
+npx expo start
 ```
 
 ## Login Credentials
