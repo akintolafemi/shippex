@@ -26,9 +26,6 @@ export type RootStackParamList = AuthScreensParamList &
     App: NavigatorScreenParams<RootTabParamList> | undefined;
     LandingScreen: undefined;
     HomeTabScreen: undefined;
-    ProfileTabScreen: undefined;
-    BuyerTabScreen: undefined;
-    VendorTabScreen: undefined;
   };
 
 export type RootStackScreenProps<Screen extends keyof RootStackParamList> =

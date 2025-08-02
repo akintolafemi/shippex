@@ -11,7 +11,7 @@ import { ActivityIndicator } from "react-native";
 
 import { View } from "src/components/themed.components";
 import fontUtils from "src/utils/font.utils";
-import colorsConstants from "src/constants/colors.constants";
+import { colorPrimary } from "src/constants/colors.constants";
 import { SafeAreaProvider } from "react-native-safe-area-context";
 import Navigation from "src/navigation";
 import useCachedResources from "src/hooks/useCachedResources";
@@ -30,7 +30,7 @@ function App() {
       >
         <ActivityIndicator
           size={fontUtils.h(40)}
-          color={colorsConstants.colorPrimary[900]}
+          color={colorPrimary}
         />
       </View>
     );

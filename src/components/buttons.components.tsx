@@ -1,7 +1,7 @@
 import { Button as RNEButton, ButtonProps } from "@rneui/themed";
 import React from "react";
-import { Platform, StyleProp, TextStyle, View, ViewStyle } from "react-native";
-import colorsConstant, {
+import { StyleProp, TextStyle, View, ViewStyle } from "react-native";
+import {
   colorDisabledBtn,
   colorDisabledTitle,
   colorPrimary,
@@ -9,7 +9,6 @@ import colorsConstant, {
 import layoutConstant from "src/constants/layout.constants";
 import fontUtil from "src/utils/font.utils";
 import { StyleSheet } from "react-native";
-import * as Haptics from "expo-haptics";
 
 type buttonPropsType = {
   type?: "outline" | "solid" | "clear";

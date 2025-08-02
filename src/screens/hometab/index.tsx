@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useCallback, useEffect, useRef, useState } from "react";
 import { StyleSheet } from "react-native";
 import { RootStackScreenProps } from "src/types/navigation.types";
 import { SafeAreaView, Text } from "src/components/themed.components";
@@ -14,7 +14,11 @@ import {
 import { View } from "react-native";
 import { Button } from "src/components/buttons.components";
 import { FlatList } from "react-native-gesture-handler";
-import { CustomCheckBox, ShipmentItem } from "./components/shipment.components";
+import {
+  CustomCheckBox,
+  ShipmentItem,
+  ShipmentItemProps,
+} from "./components/shipment.components";
 import { AppRefreshControl } from "src/components/refreshcontrol.component";
 import { SAMPLE_DATA } from "src/constants/app.constants";
 import { Modalize } from "react-native-modalize";
@@ -56,6 +60,13 @@ export default function HomeTabScreen({
     "lost",
     "on hold",
   ];
+
+  const renderItem = useCallback(
+    ({ item, index }: { item: ShipmentItemProps; index: number }) => (
+      <ShipmentItem {...item} />
+    ),
+    [],
+  );
 
   return (
     <SafeAreaView style={styles.container}>
@@ -116,11 +127,10 @@ export default function HomeTabScreen({
       </View>
       <FlatList
         data={data}
-        renderItem={({ item, index }) => <ShipmentItem {...item} />}
+        renderItem={renderItem}
         onEndReachedThreshold={0.2}
-        initialNumToRender={5}
-        maxToRenderPerBatch={10}
-        windowSize={5}
+        initialNumToRender={20}
+        maxToRenderPerBatch={50}
         scrollEventThrottle={16}
         removeClippedSubviews
         showsVerticalScrollIndicator={false}
